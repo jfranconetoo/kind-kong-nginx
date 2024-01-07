@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: "52.1.0"
+    targetRevision: "55.6.0"
     chart: kube-prometheus-stack
     helm:
       values: |
@@ -22,7 +22,7 @@ spec:
             - prometheus.local
         grafana:
           persistence:
-          enabled: true  # enable persistence using Persistent Volumes
+            enabled: true  # enable persistence using Persistent Volumes
           dashboardProviders:
             dashboardproviders.yaml:
               apiVersion: 1
@@ -52,7 +52,6 @@ spec:
           grafana.ini:
             server:
               domain: grafana.local
-        
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
