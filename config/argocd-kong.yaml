@@ -14,7 +14,7 @@ spec:
       - name: "ingressController.installCRDs"
         value: "false"
         forceString: true # ensures that value is treated as a string
-      values: |
+      valuesObject: 
         gateway:
           serviceMonitor:
             enabled: true
