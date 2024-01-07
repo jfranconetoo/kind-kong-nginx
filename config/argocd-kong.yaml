@@ -11,15 +11,13 @@ spec:
     chart: ingress
     helm:
       parameters:
-      - name: "ingressController.installCRDs"
+      - name: "controller.ingressController.installCRDs"
         value: "false"
         forceString: true # ensures that value is treated as a string
       valuesObject: 
         gateway:
           serviceMonitor:
             enabled: true
-            labels:
-             release: promstack
         # plugins:
         #   configMaps:                # change this to 'secrets' if you created a secret
         #   - name: kong-plugin-myheader
