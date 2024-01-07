@@ -23,7 +23,6 @@ spec:
         grafana:
           persistence:
             enabled: true  # enable persistence using Persistent Volumes
-          adminPassword: "kong"
           dashboardProviders:
             dashboardproviders.yaml:
               apiVersion: 1
