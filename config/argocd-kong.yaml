@@ -15,9 +15,10 @@ spec:
         value: "false"
         forceString: true # ensures that value is treated as a string
       values: |
-        podAnnotations:
-          prometheus.io/scrape: "true" # Ask Prometheus to scrape the
-          prometheus.io/port: "8100"   # Kong pods for metrics
+        gateway:
+          serviceMonitor:
+            enabled: true
+            labels: promstack
         # plugins:
         #   configMaps:                # change this to 'secrets' if you created a secret
         #   - name: kong-plugin-myheader
