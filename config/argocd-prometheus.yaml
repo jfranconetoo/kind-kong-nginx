@@ -10,7 +10,7 @@ spec:
     targetRevision: "55.6.0"
     chart: kube-prometheus-stack
     helm:
-      values: |
+      valuesObject: 
         prometheus:
           prometheusSpec:
             scrapeInterval: 10s
@@ -23,7 +23,7 @@ spec:
         grafana:
           persistence:
             enabled: true  # enable persistence using Persistent Volumes
-          adminPassword: kong
+          adminPassword: "kong"
           dashboardProviders:
             dashboardproviders.yaml:
               apiVersion: 1
