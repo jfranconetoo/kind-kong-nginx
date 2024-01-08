@@ -4,6 +4,8 @@ metadata:
   name: ingress-tt-api
   labels:
     name: ingress-tt-api
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
 spec:
   ingressClassName: nginx
   rules:
