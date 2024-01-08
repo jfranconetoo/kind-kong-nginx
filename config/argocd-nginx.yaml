@@ -14,7 +14,7 @@ spec:
         controller:
           watchIngressWithoutClass: true
           enablePreviewPolicies: true
-          ingressClassName: nginx
+          ingressClass: nginx
   destination:
     server: https://kubernetes.default.svc
     namespace: nginx
