@@ -14,6 +14,8 @@ spec:
         gateway:
           serviceMonitor:
             enabled: true
+            labels:
+              release: prometheus
         # plugins:
         #   configMaps:                # change this to 'secrets' if you created a secret
         #   - name: kong-plugin-myheader
