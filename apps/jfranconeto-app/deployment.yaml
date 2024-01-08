@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tt-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tt-api
+  template:
+    metadata:
+      labels:
+        app: tt-api
+    spec:
+      containers:
+      - name: tt-api
+        image: docker.io/jfranconeto/techtalk-api:1.0
+        resources:
+          limits:
+            memory: 128Mi
+            cpu: "0.2"
+        ports:
+        - containerPort: 3000
