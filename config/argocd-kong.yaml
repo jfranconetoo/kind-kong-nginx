@@ -10,10 +10,6 @@ spec:
     targetRevision: "0.10.1"
     chart: ingress
     helm:
-      parameters:
-      - name: "controller.ingressController.installCRDs"
-        value: "false"
-        forceString: true # ensures that value is treated as a string
       valuesObject: 
         gateway:
           serviceMonitor:
