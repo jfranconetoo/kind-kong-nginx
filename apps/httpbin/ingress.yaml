@@ -11,7 +11,7 @@ metadata:
     # konghq.com/https-redirect-status-code: "301"
     # konghq.com/host-header: "test.example.com"
 spec:
-  ingressClassName: nginx
+  ingressClassName: "nginx"
   rules:
   - host: "httpbin.local"
     http:
