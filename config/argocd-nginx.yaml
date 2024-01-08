@@ -1,0 +1,26 @@
+piVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: "15.5.3"
+    chart: nginx
+    helm:
+      valuesObject: 
+        controller:
+          watchIngressWithoutClass: true
+          enablePreviewPolicies: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: nginx
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      allowEmpty: true
+      selfHeal: true
