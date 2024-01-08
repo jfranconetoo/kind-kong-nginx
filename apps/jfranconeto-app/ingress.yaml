@@ -7,7 +7,6 @@ metadata:
     name: ingress-tt-api
 spec:
   ingressClassName: nginx
-  loadBalancerIP: 172.24.0.3
   rules:
   - host: tt.api
     http:
