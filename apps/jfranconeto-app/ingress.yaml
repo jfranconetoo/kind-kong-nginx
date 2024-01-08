@@ -2,12 +2,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-tt-api
+  namespace: nginx
   labels:
     name: ingress-tt-api
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
 spec:
   ingressClassName: nginx
+  loadBalancerIP: 172.24.0.3
   rules:
   - host: tt.api
     http:
